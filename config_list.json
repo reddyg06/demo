@@ -1,0 +1,21 @@
+[{
+	"command_name": "show log",
+	"case_name" : "AUTHENTICATION FAIL",
+	"regex_str": ".*(AUTHENTICATION_FAIL).*",
+	"threshold_value" : "",
+	"type_of_value" : "String",
+	"t_range" : "",
+	"negate" : "False",
+	"symptoms": "This authentication failure alert is seen when-<br>- un-supported part being inserted in the chassis.<br>- During device bootup after IOS upgrade",
+	"resolution": "Power cycle the device to recover from this condition.<br><br>Further details::<br>Please refer to the below Field notice / Bugs mentioned for more details.<br>https://www.cisco.com/c/en/us/support/docs/switches/catalyst-2960-x-series-switches/118837-technote-catalyst-00.html<br>https://bst.cloudapps.cisco.com/bugsearch/bug/CSCur56395"
+}, {
+	"command_name": "show log",
+	"case_name" : "SNMP COLDSTART",
+	"regex_str": ".*SNMP-.*(COLDSTART).*",
+	"threshold_value" : "",
+	"type_of_value" : "String",
+	"t_range" : "",
+	"negate" : "False",
+	"symptoms": "No coldstart trap is received after a Nexus switch reboots.The coldstart trap is sent by the NX-OS as soon as the management interface comes up. If the other side of the link goes through the spanning tree stages, the coldstart trap might be lost.The coldstart trap is also missing during inline management. The trap needs to be timed such that it gives enough time for the trap to be sent through inline management.",
+	"resolution": "spanning tree portfast is not enabled on the interface of the switch at the other end of the link directly connected to the outgoing interface of the trap PDU"
+}]

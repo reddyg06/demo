@@ -1,0 +1,91 @@
+#show version
+
+Cisco IOS Software, 3600 Software (C3660-I-M), Version 12.3(4)T
+ TAC Support: http://www.cisco.com/tac
+ Copyright (c) 1986-2003 by Cisco Systems, Inc.
+ Compiled Thu 18-Sep-03 15:37 by ccai
+
+ ROM: System Bootstrap, Version 12.0(6r)T, RELEASE SOFTWARE (fc1)
+ ROM:
+
+ C3660-1 uptime is 0 week, 0 days, 01 hours, 41 minutes
+ System returned to ROM by power-on
+ System image file is "slot0:tftpboot/c3660-i-mz.123-4.T"
+
+ Cisco 3660 (R527x) processor (revision 1.0) with 57344K/8192K bytes of memory.
+ Processor board ID JAB055180FF
+ R527x CPU at 225Mhz, Implementation 40, Rev 10.0, 2048KB L2 Cache
+
+
+ 3660 Chassis type: ENTERPRISE
+ 2 FastEthernet interfaces
+ 4 Serial interfaces
+ DRAM configuration is 64 bits wide with parity disabled.
+ 125K bytes of NVRAM.
+ 16384K bytes of processor board System flash (Read/Write)
+
+ Flash card inserted. Reading filesystem...done.
+ 20480K bytes of processor board PCMCIA Slot0 flash (Read/Write)
+Configuration register is 0x1022
+
+#show interfaces
+Ethernet 0 is down, line protocol is up
+ Hardware is MCI Ethernet, address is 0000.0c00.750c (bia 0000.0c00.750c)
+ Internet address is 131.108.28.8, subnet mask is 255.255.255.0
+ MTU 1500 bytes, BW 10000 Kbit, DLY 100000 usec, rely 255/255, load 1/255
+ Encapsulation ARPA, loopback not set, keepalive set (10 sec)
+ ARP type: ARPA, ARP Timeout 4:00:00
+ Last input 0:00:00, output 0:00:00, output hang never
+ Last clearing of "show interface" counters 0:00:00
+ Output queue 0/40, 0 drops; input queue 0/75, 0 drops
+ Five minute input rate 0 bits/sec, 0 packets/sec
+ Five minute output rate 2000 bits/sec, 4 packets/sec
+    1127576 packets input, 447251251 bytes, 0 no buffer
+    Received 354125 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+    5332142 packets output, 496316039 bytes, 0 underruns
+    0 output errors, 432 collisions, 0 interface resets, 0 restarts
+
+#show process cpu
+
+CPU utilization for five seconds: 65%; one minute: 27%; five minutes: 17%
+ PID Runtime(ms)     Invoked      uSecs   5Sec   1Min   5Min TTY Process 
+   1          24         184        130  0.00%  0.00%  0.00%   0 Chunk Manager    
+   2        5827      216132         26  0.00%  0.00%  0.00%   0 Load Meter       
+   3       16569       71869        230  0.00%  0.00%  0.00%   0 MDFS LC Download 
+   4    25775482     1112007      23179  0.00%  2.57%  2.32%   0 Check heaps      
+   5         101         222        454  0.00%  0.00%  0.00%   0 Pool Manager     
+   6           0           1          0  0.00%  0.00%  0.00%   0 DiscardQ Backgro 
+-
+ 193           0           1          0  0.00%  0.00%  0.00%   0 HRPC obfl reques 
+ 194        9630        1020       9441 42.06% 10.83%  2.43%   1 SSH Process      
+ 195           0           1          0  0.00%  0.00%  0.00%   0 HRPC dtp request
+ 1          24         184        130  0.00%  0.00%  0.00%   0 Chunk Manager    
+   2        5827      216132         26  0.00%  0.00%  0.00%   0 Load Meter       
+   3       16569       71869        230  0.00%  0.00%  0.00%   0 MDFS LC Download 
+   4    25775482     1112007      23179  0.00%  2.57%  2.32%   0 Check heaps      
+   5         101         222        454  0.00%  0.00%  0.00%   0 Pool Manager     
+   6           0           1          0  0.00%  0.00%  0.00%   0 DiscardQ Backgro 
+ 
+#show log
+
+%ILET-1-AUTHENTICATION_FAIL: This Switch may not have been manufactured by Cisco or with 
+ Cisco's authorization.  This product may contain software that was copied in violation of
+ Cisco's license terms.If your use of this product is the cause of a support issue, Cisco
+ may deny operation of the product, support under your warranty or under a Cisco technical
+ support program such as Smartnet.  
+ Please contact Cisco's Technical Assistance Center for more information.
+Or
+ %ILET-1-DEVICE_AUTHENTICATION_FAIL: The FlexStack Module inserted in this switch may not
+ have been manufactured by Cisco or with Cisco's authorization.If your use of this product
+ is the cause of a support issue, Cisco may deny operation of the product, support under
+ your warranty or under a Cisco technical support program such as Smartnet. 
+ Please contact Cisco's Technical Assistance Center for more information.
+ 
+ *Dec 15 02:19:58.680 UTC: %SNMP-5-COLDSTART: SNMP agent on host router01 is undergoing a cold start.
+
+#show env all
+FAN is NOT OK
+Internal POWER supply is OK
+RPS is NOT present
+RPS is FAULTY

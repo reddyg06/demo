@@ -1,0 +1,4 @@
+import json
+
+a ={'command_name': 'show log', 'regex_str': '.*(AUTHENTICATION_FAIL).*', 'symptoms': 'This authentication failure alert is seen when-<br>- un-supported part being inserted in the chassis.<br>- During device bootup after IOS upgrade', 'resolution': 'Power cycle the device to recover from this condition.<br><br>Further details::<br>Please refer to the below Field notice / Bugs mentioned for more details.<br>_https://www.cisco.com/c/en/us/support/docs/switches/catalyst-2960-x-series-switches/118837-technote-catalyst-00.html<br>_https://bst.cloudapps.cisco.com/bugsearch/bug/CSCur56395'}
+print(a['command_name'])
