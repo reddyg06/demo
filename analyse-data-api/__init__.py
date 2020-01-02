@@ -34,15 +34,15 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         return_body = "<h3>Error while fetching config details !!!</h3>" + str(e)
         return func.HttpResponse(return_body,mimetype='text/html')
 
-    try:
-        read_log = open(os.path.join(name + '.txt'), 'r').read()
-    except Exception as e:
-        print(e)
-        return_body = "<h3>Error while reading log file !!!</h3>" + str(e)
-        return func.HttpResponse(return_body,mimetype='text/html')
+    # try:
+    #     read_log = open(os.path.join(name + '.txt'), 'r').read()
+    # except Exception as e:
+    #     print(e)
+    #     return_body = "<h3>Error while reading log file !!!</h3>" + str(e)
+    #     return func.HttpResponse(return_body,mimetype='text/html')
         
     try:
-        output = analyse_data.parse_data(datajson,read_log)
+        output = analyse_data.parse_data(datajson,name)
         print('OUTPUT')
         print(output)
         if output[0] == False:
